@@ -1,5 +1,5 @@
 {
-  "name": "capacitor-serial",
+  "name": "vsi-capacitor-serial",
   "version": "0.0.1",
   "description": "Serial port communication",
   "main": "dist/plugin.cjs.js",

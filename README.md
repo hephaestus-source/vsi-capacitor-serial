@@ -5,7 +5,7 @@ Serial port communication
 ## Install
 
 ```bash
-npm install capacitor-serial
+npm install vsi-capacitor-serial
 npx cap sync
 ```
 

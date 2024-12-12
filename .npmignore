@@ -1,0 +1,16 @@
+.idea
+node_modules
+android/.gradle/
+android/.idea/
+android/local.properties
+build/
+out/
+
+# Config files
+.eslintrc
+.prettierrc
+.vscode/
+*.log
+
+# Ignore platform files not in use
+ios/

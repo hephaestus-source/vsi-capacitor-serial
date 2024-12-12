@@ -7,7 +7,15 @@
   "types": "dist/esm/index.d.ts",
   "unpkg": "dist/plugin.js",
   "files": [
-    "android/",
+    "android/gradle",
+    "android/libs",
+    "android/src",
+    "android/build.gradle",
+    "android/gradle.properties",
+    "android/gradlew",
+    "android/gradlew.bat",
+    "android/proguard-rules.pro",
+    "android/settings.gradle",
     "dist/"
   ],
   "author": "Hephaestus",

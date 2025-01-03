@@ -85,10 +85,12 @@ public class Serial {
         UsbDevice device = driver.getDevice();
 
         var activity = activitySupplier.get();
+        var intent = new Intent(UsbBroadcastReceiver.USB_PERMISSION);
+        intent.setPackage(activity.getPackageName());
         PendingIntent pendingIntent = PendingIntent.getBroadcast(
                 activity,
                 0,
-                new Intent(UsbBroadcastReceiver.USB_PERMISSION),
+                intent,
                 PendingIntent.FLAG_MUTABLE
         );
 
@@ -96,7 +98,7 @@ public class Serial {
         filter.addAction(UsbBroadcastReceiver.USB_PERMISSION);
 
         UsbBroadcastReceiver usbReceiver = new UsbBroadcastReceiver(call, activity, getDeviceResponse(driver).toJSON());
-        activity.registerReceiver(usbReceiver, filter);
+        activity.registerReceiver(usbReceiver, filter, Context.RECEIVER_NOT_EXPORTED);
 
         try {
             manager.requestPermission(device, pendingIntent);
